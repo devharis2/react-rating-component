@@ -2,18 +2,30 @@
   "name": "react-rating-component",
   "version": "1.0.0",
   "description": "Simple react rating component",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rollup": "rollup -c"
   },
+  "type": "commonjs",
   "author": "Haris Iqbal",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.26",
     "react": "^18.2.0",
+    "rollup": "^3.9.1",
+    "rollup-plugin-dts": "^5.1.1",
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "react-icons": "^4.7.1"
-  }
+    "react-icons": "^4.7.1",
+    "tslib": "^2.4.1"
+  },
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }

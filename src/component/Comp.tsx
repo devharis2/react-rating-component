@@ -8,9 +8,8 @@ export interface Props {
 
 const Rating = ({ starsAmount, size }: Props): JSX.Element => {
   const [stars, setStars] = useState(new Array(starsAmount || 5).fill(false));
-
   function renderStars() {
-    return stars.map((el, i) => {
+    return stars.map((el: boolean, i: number) => {
       if (el) {
         <AiFillStar
           key={i}
@@ -55,4 +54,4 @@ const Rating = ({ starsAmount, size }: Props): JSX.Element => {
   );
 };
 
-export default memo(Rating);
+export default Rating;
